@@ -8,9 +8,6 @@ import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created on 23.06.2016.
- */
 public class SimplePumpTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();

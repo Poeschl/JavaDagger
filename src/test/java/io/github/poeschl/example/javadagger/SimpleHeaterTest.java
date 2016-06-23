@@ -8,9 +8,6 @@ import java.io.PrintStream;
 
 import static org.junit.Assert.*;
 
-/**
- * Created on 23.06.2016.
- */
 public class SimpleHeaterTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();

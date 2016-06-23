@@ -11,9 +11,6 @@ import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-/**
- * Created on 23.06.2016.
- */
 public class CoffeeMachineTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();

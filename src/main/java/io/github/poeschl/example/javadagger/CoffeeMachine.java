@@ -1,14 +1,14 @@
 package io.github.poeschl.example.javadagger;
 
-/**
- * Created on 23.06.2016.
- */
+import javax.inject.Inject;
+
 public class CoffeeMachine {
 
-    private Heater heater;
-    private Pump pump;
+    private final Heater heater;
+    private final Pump pump;
 
 
+    @Inject
     CoffeeMachine(Heater heater, Pump pump) {
         this.heater = heater;
         this.pump = pump;
