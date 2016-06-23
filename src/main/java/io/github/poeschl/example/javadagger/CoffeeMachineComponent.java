@@ -8,7 +8,8 @@ import javax.inject.Singleton;
 @Component(
         modules = {
                 HeaterModule.class,
-                PumpModule.class
+                PumpModule.class,
+                EnergyModule.class
         }
 )
 public interface CoffeeMachineComponent {

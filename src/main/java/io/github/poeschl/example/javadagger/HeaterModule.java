@@ -7,13 +7,18 @@ import dagger.Provides;
 public class HeaterModule {
 
     @Provides
-    Heater provideHeater(SimpleHeater simpleHeater) {
-        return simpleHeater;
+    Heater provideHeater(SuperHotHeater superHotHeater) {
+        return superHotHeater;
     }
 
     @Provides
     SimpleHeater provideSimpleHeater() {
         return new SimpleHeater();
+    }
+
+    @Provides
+    SuperHotHeater provieSuperHotHeater(PowerPlug powerPlug) {
+        return new SuperHotHeater(powerPlug);
     }
 
 }
