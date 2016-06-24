@@ -17,7 +17,7 @@ public class HeaterModule {
     }
 
     @Provides
-    SuperHotHeater provieSuperHotHeater(PowerPlug powerPlug) {
+    SuperHotHeater provideSuperHotHeater(PowerPlug powerPlug) {
         return new SuperHotHeater(powerPlug);
     }
 

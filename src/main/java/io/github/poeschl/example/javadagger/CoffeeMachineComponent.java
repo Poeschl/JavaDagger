@@ -22,6 +22,7 @@ public interface CoffeeMachineComponent {
             return DaggerCoffeeMachineComponent.builder()
                     .heaterModule(new HeaterModule())
                     .pumpModule(new PumpModule())
+                    .energyModule(new EnergyModule())
                     .build();
         }
     }
