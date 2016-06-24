@@ -9,7 +9,8 @@ import javax.inject.Singleton;
         modules = {
                 HeaterModule.class,
                 PumpModule.class,
-                EnergyModule.class
+                EnergyModule.class,
+                FilterModule.class
         }
 )
 public interface CoffeeMachineComponent {
@@ -23,6 +24,7 @@ public interface CoffeeMachineComponent {
                     .heaterModule(new HeaterModule())
                     .pumpModule(new PumpModule())
                     .energyModule(new EnergyModule())
+                    .filterModule(new FilterModule())
                     .build();
         }
     }
