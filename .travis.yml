@@ -11,5 +11,5 @@ cache:
 script:
     - ./gradlew check shadowJar
 
-deploy:
+after_script:
     - java -jar build/libs/JavaDagger-1.0.jar
