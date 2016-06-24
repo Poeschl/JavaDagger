@@ -9,4 +9,7 @@ cache:
     - $HOME/.gradle/
 
 script:
-    - ./gradlew check
+    - ./gradlew check shadowJar
+
+deploy:
+    - java -jar build/libs/JavaDagger-1.0.jar
