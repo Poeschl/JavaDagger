@@ -9,7 +9,7 @@ cache:
     - $HOME/.gradle/
 
 script:
-    - ./gradlew check shadowJar
+    - ./gradlew check jacocoTestReport coveralls shadowJar
 
 after_script:
     - java -jar build/libs/JavaDagger-1.0.jar

@@ -10,6 +10,7 @@ buildscript {
     dependencies {
         classpath "net.ltgt.gradle:gradle-apt-plugin:0.6"
         classpath "com.github.jengelman.gradle.plugins:shadow:1.2.3"
+        classpath "org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.6.3"
     }
 }
 
@@ -17,6 +18,8 @@ apply plugin: 'java'
 apply plugin: "net.ltgt.apt"
 apply plugin: 'idea'
 apply plugin: "com.github.johnrengelman.shadow"
+apply plugin: "jacoco"
+apply plugin: 'com.github.kt3k.coveralls'
 
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
@@ -34,6 +37,23 @@ jar {
 
 shadowJar {
     classifier = null
+}
+
+jacoco {
+    toolVersion = "0.7.6.201602180812"
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        html.enabled true
+    }
+
+    afterEvaluate {
+        classDirectories = files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: ["**/Dagger*.*", "**/*Component*", "**/*Module.*", "**/*_Factory.*", "**/*_Provide*Factory.*"])
+        })
+    }
 }
 
 dependencies {
