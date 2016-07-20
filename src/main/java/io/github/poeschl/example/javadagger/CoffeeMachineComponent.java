@@ -15,7 +15,10 @@ import javax.inject.Singleton;
 )
 public interface CoffeeMachineComponent {
 
+    CoffeeMachine coffeeMachine();
+
     final class Initializer {
+
         private Initializer() {
         }
 
@@ -28,6 +31,4 @@ public interface CoffeeMachineComponent {
                     .build();
         }
     }
-
-    CoffeeMachine coffeeMachine();
 }
